@@ -3,17 +3,18 @@ package com.eden.mesozoic;
 import java.text.DecimalFormat;
 import java.util.Objects;
 
-public class Profile {
+public class DinoProfile {
     private String name;
     private String species;
     private String diet;
     private int age;
     private double dailyFood;
     private int weight;
+    private int enclosureNumber;
 
     private DecimalFormat df = new DecimalFormat("#.000");
 
-    Profile(String name, String species, String diet, int age, int weight){
+    DinoProfile(String name, String species, String diet, int age, int weight){
         this.name = name;
         this.species = species;
         this.diet = diet;
@@ -46,8 +47,20 @@ public class Profile {
         }
     }
 
+    public String getName(){
+        return name;
+    }
+    public String getSpecies(){return species;}
+    public String getDiet(){
+        return diet;
+    }
+    public int getAge(){
+        return age;
+    }
     public double getDailyFood(){
         return dailyFood;
     }
+    public int getWeight(){return weight;}
+
 
 }
