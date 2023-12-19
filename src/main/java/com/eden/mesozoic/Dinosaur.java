@@ -3,7 +3,7 @@ package com.eden.mesozoic;
 import java.text.DecimalFormat;
 import java.util.Objects;
 
-public class DinoProfile {
+public class Dinosaur {
     private String name;
     private String species;
     private String diet;
@@ -14,7 +14,7 @@ public class DinoProfile {
 
     private DecimalFormat df = new DecimalFormat("#.000");
 
-    DinoProfile(String name, String species, String diet, int age, int weight){
+    Dinosaur(String name, String species, String diet, int age, int weight){
         this.name = name;
         this.species = species;
         this.diet = diet;
