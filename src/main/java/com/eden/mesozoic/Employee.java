@@ -4,6 +4,7 @@ package com.eden.mesozoic;
 
 public abstract class Employee {
     private String name;
+    private int employeeId;
     private String role;
     private String employeeStatus; // Full or part-time
     private int yearsWorked;

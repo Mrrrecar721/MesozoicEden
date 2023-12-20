@@ -7,6 +7,7 @@ public class Main extends MainGUI {
     ParkInfo parkInfo = new ParkInfo();
     Scanner scanner = new Scanner(System.in); // Get user input
     ArrayList<Dinosaur> dinoList = new ArrayList<>();
+    ArrayList<Guest> guestList = new ArrayList<>();
 
     public static void main(String[] args) {
         Main main = new Main();
@@ -15,19 +16,48 @@ public class Main extends MainGUI {
 
     public void start() {
         while (true) {
-            displayMenu();
+            mainMenu();
             int choice = scanner.nextInt();
             menuHandler(choice);
         }
     }
 
-    public void displayMenu() {
-        System.out.println("Welcome to MesoEden, Assistant!");
-        System.out.println("1. Add Dinosaur");
-        System.out.println("2. Check Park Hours");
-        System.out.println("3. Greet Guest");
+    public void mainMenu(){
+        System.out.println("Welcome to MesoEden!");
+        System.out.println("1. Guest Information");
+        System.out.println("2. Call for Assistance");
+        System.out.println("3. Employee Portal"); // Clearance needed
+        System.out.println("4. Supervisor Portal"); // Clearance needed
+        System.out.println("5. Management Portal"); // Clearance needed
+        System.out.println("6. Exit");
+    }
+
+    public void employeeMenu() {
+        System.out.println("Welcome, Assistant!");
+        System.out.println("1. Clock in/0ut");
+        System.out.println("2. Check Schedule");
+        System.out.println("3. Request Time Off");
+        System.out.println("4. Daily Tasks");
+        System.out.println("5. Exit");
+    }
+
+    public void assistantMenu() {
+        System.out.println("Welcome, Assistant!");
+        System.out.println("1. Clock in/0ut");
+        System.out.println("2. Check Schedule");
+        System.out.println("3. Request Time Off");
+        System.out.println("4. ");
+        System.out.println("5. Add Dinosaur");
+        System.out.println("6. Exit");
+    }
+
+    public void managementMenu() {
+        System.out.println("Welcome, Assistant!");
+        System.out.println("1. ");
+        System.out.println("2. Check Schedule");
+        System.out.println("3. Request Time Off");
         System.out.println("4. Check Visitor Count");
-        System.out.println("5. Manage Staff");
+        System.out.println("5. Add Dinosaur");
         System.out.println("6. Exit");
     }
 

@@ -1,8 +1,10 @@
 package com.eden.mesozoic;
 
 public class Guest {
-    private String name;
-    private int memberNumber;
+    final private String name;
+    final private int memberNumber;
+    private Boolean annualMember = false;
+    final private String memberStatus = " ";
 
     Guest(String name, int memberNumber){
         this.name = name;
@@ -11,4 +13,8 @@ public class Guest {
 
     public String getName() {return name;}
     public int getMemberNumber() {return memberNumber;}
+
+    public void annualPurchaseOrRenewal(){
+        this.annualMember = true;
+    }
 }
