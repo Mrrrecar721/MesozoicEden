@@ -18,7 +18,7 @@ public class Main extends MainGUI {
         while (true) {
             mainMenu();
             int choice = scanner.nextInt();
-            menuHandler(choice);
+            mainMenuHandler(choice);
         }
     }
 
@@ -33,7 +33,7 @@ public class Main extends MainGUI {
     }
 
     public void employeeMenu() {
-        System.out.println("Welcome, Assistant!");
+        System.out.println("Welcome, Team Member!");
         System.out.println("1. Clock in/0ut");
         System.out.println("2. Check Schedule");
         System.out.println("3. Request Time Off");
@@ -46,23 +46,53 @@ public class Main extends MainGUI {
         System.out.println("1. Clock in/0ut");
         System.out.println("2. Check Schedule");
         System.out.println("3. Request Time Off");
-        System.out.println("4. ");
-        System.out.println("5. Add Dinosaur");
+        System.out.println("4. Add Dinosaur");
+        System.out.println("5. Return to Main Menu");
         System.out.println("6. Exit");
     }
 
     public void managementMenu() {
-        System.out.println("Welcome, Assistant!");
-        System.out.println("1. ");
-        System.out.println("2. Check Schedule");
-        System.out.println("3. Request Time Off");
+        System.out.println("Welcome, Captain!");
+        System.out.println("1. Scheduling");
+        System.out.println("2. Orders");
+        System.out.println("3. Maintenance");
         System.out.println("4. Check Visitor Count");
         System.out.println("5. Add Dinosaur");
         System.out.println("6. Exit");
     }
 
-    public void menuHandler(int choice) {
+    public void mainMenuHandler(int choice) {
         switch (choice) {
+            case 1 -> {
+                // Guest Information
+            }
+            case 2 -> {
+                // Call for assistance
+            }
+            case 3 -> {
+                // Employee Portal
+                employeeMenu();
+                int caseThreeChoice = scanner.nextInt();
+                employeeMenuHandler(caseThreeChoice);
+            }
+            case 4 -> {
+                assistantMenu();
+                int caseFourChoice = scanner.nextInt();
+//                assistantMenHandler(caseFourChoice); not implemented
+            }
+            case 5 -> {
+                // manageStaff()
+                break;
+            }
+            case 6 -> {
+                System.out.println("Exiting...");
+                System.exit(0);
+            }
+        }
+
+    }
+    public void employeeMenuHandler(int choice2) {
+        switch (choice2) {
             case 1 -> {
                 addDinosaur();
             }
@@ -79,10 +109,6 @@ public class Main extends MainGUI {
                 break;
             }
             case 5 -> {
-                // manageStaff()
-                break;
-            }
-            case 6 -> {
                 System.out.println("Exiting...");
                 System.exit(0);
             }

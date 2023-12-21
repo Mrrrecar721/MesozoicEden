@@ -3,11 +3,12 @@ package com.eden.mesozoic;
 import java.text.DecimalFormat;
 import java.util.Objects;
 
-public class Dinosaur {
+public class Dinosaur implements Comparable<Dinosaur>{
     private String name;
     private String species;
     private String diet;
     private int age;
+    private String healthStatus;
     private double dailyFood;
     private int weight;
     private int enclosureNumber;
@@ -63,4 +64,8 @@ public class Dinosaur {
     public int getWeight(){return weight;}
 
 
+    @Override
+    public int compareTo(Dinosaur o) {
+        return Integer.compare(this.age, o.age);
+    }
 }
