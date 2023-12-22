@@ -1,15 +1,31 @@
 package com.eden.mesozoic;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main extends MainGUI {
     ParkInfo parkInfo = new ParkInfo();
     Scanner scanner = new Scanner(System.in); // Get user input
+    ArrayList<Employee> rosterList = new ArrayList<>();
+
     ArrayList<Dinosaur> dinoList = new ArrayList<>();
     ArrayList<Guest> guestList = new ArrayList<>();
+    File roster = new File("roster.csv");
+    PrintWriter out = new PrintWriter(roster);
 
-    public static void main(String[] args) {
+    public Main() throws FileNotFoundException {
+    }
+
+
+    public static void main(String[] args) throws FileNotFoundException{
+//        Dinosaur one = new Dinosaur("Steve", "trex", "Carnivore", 13, 225);
+//        Dinosaur two = new Dinosaur("bob", "trex", "Carnivore", 3, 215);
+//
+//        System.out.println(one.compareTo(two));
+
         Main main = new Main();
         main.start();
     }
@@ -57,7 +73,7 @@ public class Main extends MainGUI {
         System.out.println("2. Orders");
         System.out.println("3. Maintenance");
         System.out.println("4. Check Visitor Count");
-        System.out.println("5. Add Dinosaur");
+        System.out.println("5. Add Team Member");
         System.out.println("6. Exit");
     }
 

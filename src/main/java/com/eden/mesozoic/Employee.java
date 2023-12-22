@@ -2,7 +2,7 @@ package com.eden.mesozoic;
 
 
 
-public abstract class Employee {
+public class Employee {
     private String name;
     private int employeeId;
     private String role;
@@ -13,6 +13,10 @@ public abstract class Employee {
     private Boolean clockedIn = false;
     private Boolean onBreak = false;
     private Boolean onLunch = false;
+
+    Employee(String name, int employeeId, String role, String employeeStatus){
+
+    }
 
     public void clockIn(){
         clockedIn = true;
