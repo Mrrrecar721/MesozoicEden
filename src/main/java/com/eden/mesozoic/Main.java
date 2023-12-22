@@ -9,25 +9,28 @@ import java.util.Scanner;
 public class Main extends MainGUI {
     ParkInfo parkInfo = new ParkInfo();
     Scanner scanner = new Scanner(System.in); // Get user input
-    ArrayList<Employee> rosterList = new ArrayList<>();
+
 
     ArrayList<Dinosaur> dinoList = new ArrayList<>();
     ArrayList<Guest> guestList = new ArrayList<>();
-    File roster = new File("roster.csv");
-    PrintWriter out = new PrintWriter(roster);
-
-    public Main() throws FileNotFoundException {
-    }
 
 
     public static void main(String[] args) throws FileNotFoundException{
-//        Dinosaur one = new Dinosaur("Steve", "trex", "Carnivore", 13, 225);
-//        Dinosaur two = new Dinosaur("bob", "trex", "Carnivore", 3, 215);
-//
-//        System.out.println(one.compareTo(two));
+
+        ArrayList<Employee> rosterList = new ArrayList<>();
+        Employee rich = new Employee("Rich", "Recar", 11367, "Janitor", "Full Time");
+        File roster = new File("src/main/resources/roster.csv");
+        PrintWriter out = new PrintWriter(roster);
+        rosterList.add(rich);
+
+
+        out.printf("%s %s %n\n", rosterList.getFirst().getFirstName(), rosterList.getFirst().getLastName(), rosterList.getFirst().getEmployeeId());
+        out.close();
 
         Main main = new Main();
         main.start();
+
+
     }
 
     public void start() {
