@@ -6,7 +6,7 @@ public class Employee {
     private String lastName;
     //    private String middleName;
     final private int employeeId;
-    private String role;
+    private String role; // Janitor, security etc
     private String employeeStatus; // Full or part-time
     private int yearsWorked = 0;
     private Boolean clockedIn = false;
@@ -71,5 +71,13 @@ public class Employee {
 
     public void timeWorked() {
 
+    }
+    @Override
+    public String toString(){
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("First Name = ").append(this.firstName);
+        stringBuffer.append("\nLast Name = ").append(this.lastName);
+        stringBuffer.append("\nid = ").append(this.employeeId);
+        return stringBuffer.toString();
     }
 }

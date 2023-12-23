@@ -1,15 +1,17 @@
 package com.eden.mesozoic;
 
+import org.apache.commons.csv.CSVFormat;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main extends MainGUI {
     ParkInfo parkInfo = new ParkInfo();
     Scanner scanner = new Scanner(System.in); // Get user input
-
 
     ArrayList<Dinosaur> dinoList = new ArrayList<>();
     ArrayList<Guest> guestList = new ArrayList<>();
@@ -20,12 +22,11 @@ public class Main extends MainGUI {
         ArrayList<Employee> rosterList = new ArrayList<>();
         Employee rich = new Employee("Rich", "Recar", 11367, "Janitor", "Full Time");
         File roster = new File("src/main/resources/roster.csv");
+        System.out.println(rich.toString());
         PrintWriter out = new PrintWriter(roster);
         rosterList.add(rich);
 
 
-        out.printf("%s %s %n\n", rosterList.getFirst().getFirstName(), rosterList.getFirst().getLastName(), rosterList.getFirst().getEmployeeId());
-        out.close();
 
         Main main = new Main();
         main.start();
