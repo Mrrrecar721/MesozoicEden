@@ -1,10 +1,13 @@
 package com.eden.mesozoic;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+
 
 class MainTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void doubleNumber() {
+
     }
 }
