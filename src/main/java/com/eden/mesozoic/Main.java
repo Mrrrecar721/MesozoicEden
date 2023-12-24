@@ -1,6 +1,5 @@
 package com.eden.mesozoic;
 
-import org.apache.commons.csv.CSVFormat;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,8 +22,10 @@ public class Main extends MainGUI {
         Employee rich = new Employee("Rich", "Recar", 11367, "Janitor", "Full Time");
         File roster = new File("src/main/resources/roster.csv");
         System.out.println(rich.toString());
-        PrintWriter out = new PrintWriter(roster);
         rosterList.add(rich);
+
+
+
 
 
 
