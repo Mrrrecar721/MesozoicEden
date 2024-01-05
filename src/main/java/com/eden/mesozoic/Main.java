@@ -78,7 +78,7 @@ public class Main extends MainGUI {
         System.out.println("2. Orders");
         System.out.println("3. Maintenance");
         System.out.println("4. Check Visitor Count");
-        System.out.println("5. Add Team Member");
+        System.out.println("5. Add/Remove Team Member");
         System.out.println("6. Exit");
     }
 
