@@ -1,11 +1,8 @@
 package com.eden.mesozoic;
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main extends MainGUI {

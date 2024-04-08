@@ -8,24 +8,24 @@
     <name>Archetype - MesozoicEden</name>
     <url>https://maven.apache.org</url>
     <properties>
-        <junit-jupiter.version>5.10.0</junit-jupiter.version>
-        <commons-lang3.version>3.13.0</commons-lang3.version>
+        <junit-jupiter.version>5.10.2</junit-jupiter.version>
+        <commons-lang3.version>3.14.0</commons-lang3.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>19.0.2.1</version>
+            <version>22</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>19.0.2.1</version>
+            <version>22</version>
         </dependency>
         <dependency>
             <groupId>org.controlsfx</groupId>
             <artifactId>controlsfx</artifactId>
-            <version>11.1.2</version>
+            <version>11.2.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -47,14 +47,11 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>5.8.0</version>
+            <version>5.11.0</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>5.9</version>
-        </dependency>
+
+
 
     </dependencies>
     <build>
@@ -96,4 +93,10 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>java.net.m2</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
 </project>
